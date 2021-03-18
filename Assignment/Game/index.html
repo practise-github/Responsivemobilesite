@@ -10,6 +10,40 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
+	<script>
+function myFunction() {
+var num= Math.ceil(Math.random()*10);
+ if (num==7)
+  {document.getElementById("rand").innerHTML ="Your score: 7";
+  alert("You win. You got a 7.");
+  }
+  else
+  {document.getElementById("rand").innerHTML ="Your score: " +num;
+  
+  }
+}
+
+if (num==7)
+alert("You win");
+
+
+
+</script>
+<script>
+function opponentFunction() {
+var onum= Math.ceil(Math.random()*10);
+ if (onum==7)
+  {document.getElementById("rand2").innerHTML ="Opponent score: 7";
+  alert("You loose. Opponent scored a 7.");
+  }
+  else
+  {document.getElementById("rand2").innerHTML ="Opponent score: " +onum;
+  
+  }
+
+}
+
+</script>
 </head>
 <body>
     <header class="container">
@@ -28,45 +62,28 @@
             <p> 
                 Roll the dice twice to get 7 
             </p> 
-            <div class="form-actions">
-                    <button class="btn btn-primary" id="playInitButton">Play Now</button>
-            </div>
-            
         </section>
         </section>
 		
-        <section>
-            <div class="alert alert-success won text-center">
-                <strong>You won!</strong> We wish to see you again!<p id="won-analysis"></p>
-            </div>
-            <div class="alert alert-dark lost text-center">
-                <strong>You lost!</strong> Better luck next time!<p id="lost-analysis"></p>
-            </div>
-        </section>
-        <section class="game margin-dist" id="game-section">
-            
+        <section id="game-section">
+        
             
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6" align="center">
                     <h1>You</h1>
-                    <p id="text-area-for-player"></p>
+					<p id="rand">Your score: 0</p>
+                    <button class="btn btn-primary" onclick="myFunction()">Play</button>
+						
                 </div>
-                <div class="col-sm-6">
+                    
+                
+                <div class="col-sm-6" align="center">
                     <h1>Opponent</h1>
-                    <p id="text-area-for-dealer"></p>
+					<p id="rand2">Your score: 0</p>
+                    <button class="btn btn-primary" onclick="opponentFunction()">Opponent Play</button>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <button id="hit" class="btn btn-primary">Hit</button>
-                </div>
-                <div class="col-sm-4">
-                    <button id="stand" class="btn btn-primary">Stand</button>
-                </div>
-                <div class="col-sm-4">
-                    <button id="surrender" class="btn btn-primary">Surrender</button>
-                </div>
-            </div>
+            
         </section>
     </main>
 <script src="./logic.js"></script>
