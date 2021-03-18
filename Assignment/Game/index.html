@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Mayank">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+	<script>
+function myFunction() {
+var num= Math.ceil(Math.random()*10);
+ if (num==7)
+  {document.getElementById("rand").innerHTML ="Your score: 7";
+  alert("You win. You got a 7.");
+  }
+  else
+  {document.getElementById("rand").innerHTML ="Your score: " +num;
+  
+  }
+}
+
+if (num==7)
+alert("You win");
+
+
+
+</script>
+<script>
+function opponentFunction() {
+var onum= Math.ceil(Math.random()*10);
+ if (onum==7)
+  {document.getElementById("rand2").innerHTML ="Opponent score: 7";
+  alert("You loose. Opponent scored a 7.");
+  }
+  else
+  {document.getElementById("rand2").innerHTML ="Opponent score: " +onum;
+  
+  }
+
+}
+
+</script>
+</head>
+<body>
+    <header class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h1>Puppy Lucky 7 Game</h1>
+            </div>
+            
+        </div>
+    </header>
+    <main class="container">
+        <section class="hero-img">
+            <!--h4>Roll 7  opponent \n seven before your \n opponent</h4-->
+            <section class= "side-text" >
+            <h3>Play to get a 7</h3>
+            <p> 
+                Roll the dice twice to get 7 
+            </p> 
+        </section>
+        </section>
+		
+        <section id="game-section">
+        
+            
+            <div class="row">
+                <div class="col-sm-6" align="center">
+                    <h1>You</h1>
+					<p id="rand">Your score: 0</p>
+                    <button class="btn btn-primary" onclick="myFunction()">Play</button>
+						
+                </div>
+                    
+                
+                <div class="col-sm-6" align="center">
+                    <h1>Opponent</h1>
+					<p id="rand2">Your score: 0</p>
+                    <button class="btn btn-primary" onclick="opponentFunction()">Opponent Play</button>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+<script src="./logic.js"></script>
+</body>
+</html>

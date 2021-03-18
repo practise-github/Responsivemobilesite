@@ -1,0 +1,88 @@
+*,.row,.col{
+    margin:0;
+    padding: 0;
+}
+body header ul{
+    list-style: none;
+    margin-right:0%;
+    margin-top:15px;
+}
+body header ul li{
+    display: inline;
+}
+header .social-links{
+    margin-left: 60%;
+}
+.hero-img{
+    background-image: url('./static/img/card7.jpg');
+    /*background-position: center;*/
+    /*background-attachment: fixed; */
+    color: white;
+    height: 520px;  
+    /* float: left; */
+    overflow: auto; 
+    width: 1030px;;
+    
+}
+.hero-img>h3{
+    margin-top:100px; 
+    text-align: center;
+}
+.hero-img>h4{
+    margin-top:100px; 
+    text-align: right;
+}
+.hero-img>p{
+    width: 80%;
+    margin: auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    margin-top: 5%;
+}
+.hero-img .btn{
+    color:black;
+    border-color:white;
+    background-color: white;
+}
+.hero-img .btn:hover{
+    color:white;
+    border-color:black;
+    background-color: black;
+}
+.hero-img>.form-actions{
+    text-align: center;
+}
+.margin-dist{
+    margin-top: 7%;
+}
+.game button{
+    width: 100%;
+}
+.game h1{
+    text-align: center;
+}
+.game p{
+    text-align: center;
+}
+.side-text>h3{
+    margin-top:100px; 
+	margin-left:700px;
+
+    text-align: right;
+}
+.side-text>p{
+    
+	margin-right:50px;
+
+    text-align: right;
+}
+.side-text>h3{
+    margin-top:150px; 
+	margin-right:50px;
+
+    text-align: right;
+}
+.side-text>.form-actions{
+    text-align: right;
+	margin-right:100px;
+}
