@@ -1,4 +1,4 @@
-/*!
+img/*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
@@ -126,7 +126,12 @@ audio:not([controls]) {
 
 img {
   border-style: none;
+	display: block;
+  height: auto;
+
 }
+
+
 
 svg:not(:root) {
   overflow: hidden;
