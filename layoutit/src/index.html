@@ -22,11 +22,13 @@ var num= Math.ceil(Math.random()*12);
   else
   {document.getElementById("rand").innerHTML ="Your Dice Roll Count: " +num; 
   }
-if(num==7)
-removeElements();
+
 
 document.getElementById("button1").style.visibility="hidden";
 document.getElementById("button2").style.visibility="visible";
+
+if(num==7)
+removeElements();
 }
 
 </script>
@@ -35,6 +37,8 @@ function removeElements()
 {
 document.getElementById("you").style.visibility="hidden";
 document.getElementById("opponent").style.visibility="hidden";
+document.getElementById("button1").style.visibility="hidden";
+document.getElementById("button2").style.visibility="hidden";
 }
 </script>
 
@@ -48,11 +52,13 @@ var onum= Math.ceil(Math.random()*12);
   else
   {document.getElementById("rand2").innerHTML ="Your Opponents Dice Roll Count: " +onum;
   }
-if(onum==7)
-removeElements();
+
 
 document.getElementById("button2").style.visibility="hidden";
 document.getElementById("button1").style.visibility="visible";
+
+if(onum==7)
+removeElements();
 }
 // add image to folder, class name, rand, rand2, myfunction, oppoenent
 </script>
@@ -77,7 +83,7 @@ document.getElementById("button1").style.visibility="visible";
 			<br><br><br>
 			<h3>Play to get a 7</h3>
             <p> 
-                Roll the dice twice to get 7 
+                Roll the dice to get 7 
             </p>
 		</div>
 		<div class="col-lg-2" "col-md-2" "col-sm-2" "col-xs-2">
@@ -94,7 +100,7 @@ document.getElementById("button1").style.visibility="visible";
 				Your Dice Roll Count: 0
 				</p>
 			<button id = "button1" type="button" class="btn btn-primary" onclick="myFunction()">
-				Button
+				Play
 			</button>
 		</div>
 		<div id="opponent" class="col-lg-3" "col-md-3" "col-sm-3" "col-xs-3" style="text-align: center">
@@ -105,7 +111,7 @@ document.getElementById("button1").style.visibility="visible";
 				Your Opponents Dice Roll Count: 0
 				</p>
 			<button id ="button2" type="button" class="btn btn-primary " onclick="opponentFunction()">
-				Button
+				Opponent Play
 			</button>
 		</div>
 	</div>
