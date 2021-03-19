@@ -14,16 +14,20 @@
     <link href="css/style.css" rel="stylesheet">
 <script>
 function myFunction() {
-var num= Math.ceil(Math.random()*10);
+var num= Math.ceil(Math.random()*12);
  if (num==7)
-  {document.getElementById("rand").innerHTML ="Your score: 7";
+  {document.getElementById("rand").innerHTML ="Your Dice Roll Count: 7";
   alert("You win. You got a 7.");
   }
   else
-  {document.getElementById("rand").innerHTML ="Your score: " +num; 
+  {document.getElementById("rand").innerHTML ="Your Dice Roll Count: " +num; 
   }
 if(num==7)
-removeElements();}
+removeElements();
+
+document.getElementById("button1").style.visibility="hidden";
+document.getElementById("button2").style.visibility="visible";
+}
 
 </script>
 <script>
@@ -33,18 +37,22 @@ document.getElementById("you").style.visibility="hidden";
 document.getElementById("opponent").style.visibility="hidden";
 }
 </script>
+
 <script>
 function opponentFunction() {
-var onum= Math.ceil(Math.random()*10);
+var onum= Math.ceil(Math.random()*12);
  if (onum==7)
-  {document.getElementById("rand2").innerHTML ="Opponent score: 7";
+  {document.getElementById("rand2").innerHTML ="Your Opponents Dice Roll Count: 7";
   alert("You loose. Opponent scored a 7.");
   }
   else
-  {document.getElementById("rand2").innerHTML ="Opponent score: " +onum;
+  {document.getElementById("rand2").innerHTML ="Your Opponents Dice Roll Count: " +onum;
   }
 if(onum==7)
 removeElements();
+
+document.getElementById("button2").style.visibility="hidden";
+document.getElementById("button1").style.visibility="visible";
 }
 // add image to folder, class name, rand, rand2, myfunction, oppoenent
 </script>
@@ -83,9 +91,9 @@ removeElements();
 				You
 			</h3>
 			<p id="rand" class="text-center">
-				Your score: 0
+				Your Dice Roll Count: 0
 				</p>
-			<button type="button" class="btn btn-primary" onclick="myFunction()">
+			<button id = "button1" type="button" class="btn btn-primary" onclick="myFunction()">
 				Button
 			</button>
 		</div>
@@ -94,9 +102,9 @@ removeElements();
 				Opponent
 			</h3>
 			<p id="rand2" class="text-center">
-				Opponent score: 0
+				Your Opponents Dice Roll Count: 0
 				</p>
-			<button type="button" class="btn btn-primary " onclick="opponentFunction()">
+			<button id ="button2" type="button" class="btn btn-primary " onclick="opponentFunction()">
 				Button
 			</button>
 		</div>
